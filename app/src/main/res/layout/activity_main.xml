@@ -17,15 +17,30 @@
         android:layout_marginTop="46dp"
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="46dp"
-        android:gravity="center_horizontal"
-        android:text="@string/app_name"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="@+id/ballAnimImageView"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ballImageView"
         app:layout_constraintEnd_toEndOf="@+id/ballImageView"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ballAnimImageView"
-        app:layout_constraintTop_toTopOf="@+id/ballAnimImageView" />
+        app:layout_constraintStart_toStartOf="@+id/ballImageView"
+        app:layout_constraintTop_toTopOf="@+id/ballImageView" />
+
+    <ImageView
+        android:id="@+id/ballImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        android:contentDescription="@string/ball"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hw3ball_front"
+        />
 
     <TextView
         android:id="@+id/shakeTextView"
@@ -37,6 +52,7 @@
         android:layout_marginBottom="157dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/shake_txt"
+        android:visibility="visible"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/ballImageView"
@@ -45,29 +61,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ballImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="centerInside"
-        android:tint="white"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hw3ball_empty"
-        app:tintMode="multiply" />
-
-    <ImageView
-        android:id="@+id/ballAnimImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="centerInside"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hw3ball_front" />
 </android.support.constraint.ConstraintLayout>
